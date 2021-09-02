@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SóMassas</title>
+
+    <style>
+      body {
+        background: #a9a9a9;
+        font-family: "Robloto";
+      }
+
+      h1 {
+        margin: 0;
+        font-weight: normal;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        font-weight: normal;
+      }
+
+      .t3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        font-weight: normal;
+        visibility: hidden;
+      }
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 15px 0 0 0;
+      }
+
+      .inicio {
+        background: #cf2b2b;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+      }
+
+      .prodimg {
+        width: 60px;
+        border-radius: 5px;
+        float: right;
+        margin-left: 15px;
+      }
+
+      .produto {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+        cursor: pointer;
+        border: 5px solid white;
+      }
+
+      .produto2 {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+        cursor: pointer;
+        border: 5px solid white;
+        visibility: hidden;
+      }
+
+      .preco {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .botao {
+        background: #0b940b;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inicio">
+      <h1>SóMassas</h1>
+      <h2>O pedaço da Italia na sua casa</h2>
+    </div>
+
+    <h3>Primeiro, seu prato</h3>
+    <div id="putanesca" class="produto" onclick="escolherOp1(this.id)">
+      <img
+        class="prodimg"
+        src="https://img.itdg.com.br/tdg/images/blog/uploads/2018/07/espaguete-a-putanesca-receita.jpg?w=1200"
+      />
+      <h4>Putanesca</h4>
+      <p>
+        O 'Spaghetti alla Puttanesca é um prato elaborado com massa e com um
+        molho denominado sugo alla puttanesca.
+      </p>
+      <p class="preco">R$ 24,90</p>
+    </div>
+    <div id="bolonhesa" class="produto" onclick="escolherOp1(this.id)">
+      <img
+        class="prodimg"
+        src="https://img.cybercook.com.br/receitas/610/espaguete-com-molho-a-bolonhesa-ou-ragu-bolognese-1-360x220.jpeg"
+      />
+      <h4>Bolonhesa</h4>
+      <p>
+        Molho à bolonhesa é um molho feito com carne bovina moída, tomate e
+        outros adicionais.
+      </p>
+      <p class="preco">R$ 22,90</p>
+    </div>
+    <div id="carbonara" class="produto" onclick="escolherOp1(this.id)">
+      <img
+        class="prodimg"
+        src="https://s2.glbimg.com/EqxSd-TpdQHxoapolhluk_tVlF4=/1200x/smart/filters:cover():strip_icc()/s2.glbimg.com/Kpgvs3M5-Ve_6wYzVDA10f4ixs0%3D/s.glbimg.com/et/gs/f/original/2016/11/18/carbonara_gshow.jpg"
+      />
+      <h4>Carbonara</h4>
+      <p>
+        O seu nome é derivado da palavra italiana carbone, que significa carvão.
+        Acredita-se que tenha sido uma receita apreciada pelos preparadores de
+        carvão vegetal dos montes apeninos, na região italiana da Úmbria.
+      </p>
+      <p class="preco">R$ 25,90</p>
+    </div>
+    <div id="alho-e-oleo" class="produto" onclick="escolherOp1(this.id)">
+      <img
+        class="prodimg"
+        src="https://img.itdg.com.br/images/recipes/000/057/710/324571/324571_original.jpg"
+      />
+      <h4>Alho e Oléo</h4>
+      <p>
+        O prato é feito de alho levemente picado, fatiado ou prensado com
+        azeite, às vezes com a adição de flocos secos de pimenta.
+      </p>
+      <p class="preco">R$ 20,90</p>
+    </div>
+
+    <h3 id="t2" class="t3">Seu tipo de massa</h3>
+    <div id="espaguete" class="produto2" onclick="escolherOp2(this.id)">
+      <img
+        class="prodimg"
+        src="https://master-b2b-img.azureedge.net/product/13209-macarrao-covos-parati-espaguete-500g-g.jpg"
+      />
+      <h4>Espaguete</h4>
+    </div>
+    <div id="talharim" class="produto2" onclick="escolherOp2(this.id)">
+      <img
+        class="prodimg"
+        src="https://s.cornershopapp.com/product-images/1176526.jpg?versionId=9KQQXlk2ME66IqSwZbrcAzhkpPm3dn.q"
+      />
+      <h4>Talharim</h4>
+    </div>
+    <div id="parafuso" class="produto2" onclick="escolherOp2(this.id)">
+      <img
+        class="prodimg"
+        src="https://a-static.mlcdn.com.br/618x463/macarrao-parafuso-semola-500g-parati/centraldeembalagens/10053p/1fcf97c2394b64ad7fcfd9864d440a61.jpg"
+      />
+      <h4>Parafuso</h4>
+    </div>
+    <div id="integral" class="produto2" onclick="escolherOp2(this.id)">
+      <img
+        class="prodimg"
+        src="https://nutrienutri.fbitsstatic.net/img/p/macarrao-integral-espaguete-n-8-500g-vilma-87046/273837.jpg?w=450&h=450&v=no-change"
+      />
+      <h4>Integral</h4>
+    </div>
+
+    <h3 id="t3" class="t3">Seus ingredientes (escolha 5)</h3>
+    <div id="abacaxi" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://s2.glbimg.com/rl2qA0jqm8CYvBh7ZTnAu8NG6ds=/0x0:1999x3000/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2021/N/1/8FdLsPS2G4uiUV4a8MOg/abacaxi.jpg"
+      />
+      <h4>Abacaxi</h4>
+    </div>
+    <div id="alcaparra" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://images.tcdn.com.br/img/img_prod/760835/alcaparras_em_conserva_16_1_20200318215034.jpg"
+      />
+      <h4>Alcaparras</h4>
+    </div>
+    <div id="azeitona" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://casaspedro.vteximg.com.br/arquivos/ids/169441-1000-1000/azeitona-verde-sem-caroco-kg.png?v=637617216863270000"
+      />
+      <h4>Azeitona</h4>
+    </div>
+    <div id="bacon" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://master.restaurantemadero.com.br/assets/site/images/bacon.jpg"
+      />
+      <h4>Bacon</h4>
+    </div>
+    <div id="batata-palha" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://www.galaxcommerce.com.br/sistema/upload/1994/produtos/batata-palha_2020-06-07_11-13-58_0.jpg"
+      />
+      <h4>Batata Palha</h4>
+    </div>
+    <div id="calabresa" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://io2.convertiez.com.br/m/superpaguemenos/shop/products/images/18655/medium/linguica-calabresa-defumada-kg_76677.jpg"
+      />
+      <h4>Calabresa</h4>
+    </div>
+    <div id="carne-seca" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://cdn.awsli.com.br/440/440548/produto/28795846/485da19f5e.jpg"
+      />
+      <h4>Carne Seca</h4>
+    </div>
+    <div id="cebola" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://cdn.awsli.com.br/600x700/305/305913/produto/10293544/cebola-1d05720a.jpg"
+      />
+      <h4>Cebolas</h4>
+    </div>
+    <div id="cenoura" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://d3ugyf2ht6aenh.cloudfront.net/stores/746/397/products/cenoura-semrama1-d884e62b40d965d1a215220503425521-1024-1024.jpg"
+      />
+      <h4>Cenouras</h4>
+    </div>
+    <div id="champignon" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://a-static.mlcdn.com.br/618x463/kit-p-produzir-cogumelo-champignon-em-casa-alimento-vegano-portexx/portexx/13335543246/36a1b31275c9c6950e314d123f739b01.jpg"
+      />
+      <h4>Champignon</h4>
+    </div>
+    <div id="ervilha" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://veganbusiness.com.br/wp-content/uploads/2019/03/prote%C3%ADna-de-ervilha-1-760x507.jpg"
+      />
+      <h4>Ervilhas</h4>
+    </div>
+    <div id="frango-desfiado" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://t2.rg.ltmcdn.com/pt/images/6/0/0/recheio_de_frango_desfiado_7006_600.jpg"
+      />
+      <h4>Frango desfiado</h4>
+    </div>
+    <div id="milho" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://52586.cdn.lojaquevende.com.br/static/52586/sku/legumes-milho-verde--p-1594227501900.jpg"
+      />
+      <h4>Milho verde</h4>
+    </div>
+    <div id="mussarela" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://dourados.saofranciscoonline.com/media/catalog/product/cache/1/image/855x635/9df78eab33525d08d6e5fb8d27136e95/q/u/queijo-mussarela-fatiado-26307.jpg.jpg"
+      />
+      <h4>Queijo mussarela</h4>
+    </div>
+    <div id="ovo-de-codorna" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://d3ugyf2ht6aenh.cloudfront.net/stores/746/397/products/ovo-de-codorna-100691-cf64bbced55fa288d115221966556014-1024-1024.jpg"
+      />
+      <h4>Ovo de codorna</h4>
+    </div>
+    <div id="palmito" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia27058/processamento-palmito-cursos-cpt.jpg"
+      />
+      <h4>Palmito</h4>
+    </div>
+    <div id="pimentao" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="data:image/jpeg;base64,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"
+      />
+      <h4>Pimentão</h4>
+    </div>
+    <div id="presunto" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://images.tcdn.com.br/img/img_prod/760835/alcaparras_em_conserva_16_1_20200318215034.jpg"
+      />
+      <h4>Presunto</h4>
+    </div>
+    <div id="salsicha" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://charcutaria.org/wp-content/uploads/2016/12/salsicha-1200x900.jpg"
+      />
+      <h4>Salsicha</h4>
+    </div>
+    <div id="tomate" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://www.drogariaminasbrasil.com.br/media/product/349/molho-de-tomate-tradicional-fugini-sache-340g-220.jpg"
+      />
+      <h4>Tomate</h4>
+    </div>
+    <div id="picles" class="produto2" onclick="escolherOp3(this.id)">
+      <img
+        class="prodimg"
+        src="https://www.receiteria.com.br/wp-content/uploads/receitas-de-picles.jpg"
+      />
+      <h4>Picles</h4>
+    </div>
+
+    <div id="form" class="produto2">
+      <table>
+        <tr>
+          <td>Seu Nome:</td>
+          <td><input type="text" name="nome" size="40" id="nome" /> <br /></td>
+        </tr>
+        <tr>
+          <td>Endereço:</td>
+          <td>
+            <input type="text" name="endereco" size="40" id="endereco" /> <br />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="botao" class="botao" onclick="finalizarNoite()">
+      Finalizar seu pedido
+    </div>
+
+    <script>
+      let op1;
+      let op2;
+      let t2 = document.getElementById("t2");
+      let t3 = document.getElementById("t3");
+      let form = document.getElementById("form");
+      let botao = document.getElementById("botao");
+      let nome = document.getElementById("nome");
+      let endereco = document.getElementById("endereco");
+      let vetor = [];
+      let vetor1 = [];
+      let vetor2 = [];
+      vetor1[1] = document.getElementById("putanesca");
+      vetor1[2] = document.getElementById("bolonhesa");
+      vetor1[3] = document.getElementById("carbonara");
+      vetor1[4] = document.getElementById("alho-e-oleo");
+      vetor2[1] = document.getElementById("espaguete");
+      vetor2[2] = document.getElementById("talharim");
+      vetor2[3] = document.getElementById("parafuso");
+      vetor2[4] = document.getElementById("integral");
+      vetor[0] = document.getElementById("abacaxi");
+      vetor[1] = document.getElementById("alcaparra");
+      vetor[2] = document.getElementById("azeitona");
+      vetor[3] = document.getElementById("bacon");
+      vetor[4] = document.getElementById("batata-palha");
+      vetor[5] = document.getElementById("calabresa");
+      vetor[6] = document.getElementById("carne-seca");
+      vetor[7] = document.getElementById("cebola");
+      vetor[8] = document.getElementById("cenoura");
+      vetor[9] = document.getElementById("champignon");
+      vetor[10] = document.getElementById("ervilha");
+      vetor[11] = document.getElementById("frango-desfiado");
+      vetor[12] = document.getElementById("milho");
+      vetor[13] = document.getElementById("mussarela");
+      vetor[14] = document.getElementById("ovo-de-codorna");
+      vetor[15] = document.getElementById("palmito");
+      vetor[16] = document.getElementById("pimentao");
+      vetor[17] = document.getElementById("presunto");
+      vetor[18] = document.getElementById("salsicha");
+      vetor[19] = document.getElementById("tomate");
+      vetor[20] = document.getElementById("picles");
+      let pedido;
+
+      function escolherOp1(clique) {
+        t2.style.visibility = "visible";
+        for (i = 1; i < 5; i++) {
+          vetor2[i].style.visibility = "visible";
+        }
+        for (i = 1; i < 5; i++) {
+          if (vetor1[i].id == clique) {
+            vetor1[i].style.borderColor = "green";
+          }
+          if (vetor1[i].id != clique) {
+            vetor1[i].style.borderColor = "white";
+          }
+        }
+        op1 = clique;
+      }
+
+      function escolherOp2(clique) {
+        t3.style.visibility = "visible";
+        for (i = 0; i < 21; i++) {
+          vetor[i].style.visibility = "visible";
+        }
+        for (i = 1; i < 5; i++) {
+          if (vetor2[i].id == clique) {
+            vetor2[i].style.borderColor = "green";
+          }
+          if (vetor2[i].id != clique) {
+            vetor2[i].style.borderColor = "white";
+          }
+        }
+        op2 = clique;
+      }
+
+      let contador = 0;
+      let apoio1;
+
+      function escolherOp3(clique) {
+        form.style.visibility = "visible";
+        botao.style.visibility = "visible";
+        if (contador < 5) {
+          for (i = 0; i < 21; i++) {
+            if (vetor[i].id == clique) {
+              vetor[i].style.borderColor = "green";
+              apoio1 += "%0D" + vetor[i].id;
+            }
+          }
+          contador++;
+        }
+        for (i = 0; i < 21; i++) {
+          vetor[i].readOnly = "true";
+        }
+      }
+
+      function finalizarNoite() {
+        // quebra de linha %0D
+        let apoio2 = apoio1.replace("undefined%0D", "");
+        alert(apoio2);
+        pedido =
+          "Olá, queria pedir o seguinte prato%0D" +
+          op1 +
+          "%0DA seguinte massa:%0D" +
+          op2 +
+          "%0DE os seguintes ingredientes:%0D" +
+          apoio2 +
+          "%0DCliente:%0D" +
+          nome.value +
+          "%0DEndereço:%0D" +
+          endereco.value;
+        window.open("https://wa.me/+559984221381?text=" + pedido);
+      }
+    </script>
+  </body>
+</html>
